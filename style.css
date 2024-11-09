@@ -28,9 +28,9 @@ nav {
     display: none; /* Hidden on large screens */
 }
 
-/* Menu Links (Hidden by default on mobile) */
+/* Menu Links */
 #menu-links {
-    list-style: none; /* Remove dots from list */
+    list-style: none; /* Remove bullets */
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -84,8 +84,8 @@ nav {
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 150px; /* Set a maximum width for logo */
+    height: auto;
     border-radius: 50%;
 }
 
