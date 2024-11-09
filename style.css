@@ -15,29 +15,62 @@ body {
 /* Navigation Bar */
 nav {
     background-color: #111;
-    padding: 10px 0;
+    padding: 10px;
+    position: relative;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    font-size: 24px;
+    color: #0db9f0;
+    cursor: pointer;
+    display: none; /* Hidden on large screens */
 }
 
-nav ul li {
+/* Menu Links (Hidden by default on mobile) */
+#menu-links {
+    list-style: none; /* Remove dots from list */
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#menu-links li {
     display: inline;
-    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #0db9f0; /* Bright color for links */
+#menu-links a {
+    color: #0db9f0;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+#menu-links a:hover {
     color: #0b89d4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    #menu-links {
+        display: none; /* Hide menu links by default */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #111;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    #menu-links.show {
+        display: flex; /* Show menu when .show class is added */
+    }
 }
 
 /* Centered Logo and Tagline */
@@ -51,19 +84,13 @@ nav ul li a:hover {
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the logo round */
+    border-radius: 50%;
 }
 
 .tagline {
     color: #0db9f0;
     font-size: 2rem;
     margin-top: 20px;
-}
-
-/* Page Content Styling */
-.page-content {
-    padding: 50px;
-    text-align: center;
 }
