@@ -9,10 +9,11 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Hamburger Icon -->
+        <ul id="menu-links" class="hidden">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="socials.html">Socials</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -22,5 +23,7 @@
         <img src="images/logo.png" alt="a-cloud logo" class="logo">
         <h1 class="tagline">a-cloud</h1>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
